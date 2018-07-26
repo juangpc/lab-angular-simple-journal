@@ -32,6 +32,9 @@ app.use(layouts);
 const index = require('./routes/index');
 app.use('/', index);
 
+const api = require('./routes/api/journal-entries');
+app.use('/api',api);
+
 app.all('/*', function (req, res) {
   res.sendfile(__dirname + '/public/index.html');
 });
