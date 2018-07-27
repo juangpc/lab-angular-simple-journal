@@ -1,0 +1,9 @@
+<form (ngSubmit)="submitForm(myForm.value)" #myForm="ngForm">
+  <p> Title 
+    <input type="text" name="title" [(ngModel)]="title" #myTitle="ngModel"/> 
+  </p>
+  <p> Content <br>
+    <textarea rows="8" cols="60" type="content" name="content" [(ngModel)]="content" #myContent="ngModel"> </textarea>
+  </p>
+  <button type="submit"> Submit Form </button>
+</form>
